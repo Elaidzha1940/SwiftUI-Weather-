@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E46E59D5289FE12B00B97827 /* SwiftUI_WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46E59D4289FE12B00B97827 /* SwiftUI_WeatherApp.swift */; };
+		E46E59D5289FE12B00B97827 /* SwiftUIWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46E59D4289FE12B00B97827 /* SwiftUIWeatherApp.swift */; };
 		E46E59D7289FE12B00B97827 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46E59D6289FE12B00B97827 /* ContentView.swift */; };
 		E46E59D9289FE12C00B97827 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E46E59D8289FE12C00B97827 /* Assets.xcassets */; };
 		E46E59DC289FE12C00B97827 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E46E59DB289FE12C00B97827 /* Preview Assets.xcassets */; };
@@ -16,7 +16,7 @@
 
 /* Begin PBXFileReference section */
 		E46E59D1289FE12B00B97827 /* SwiftUI Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E46E59D4289FE12B00B97827 /* SwiftUI_WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_WeatherApp.swift; sourceTree = "<group>"; };
+		E46E59D4289FE12B00B97827 /* SwiftUIWeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWeatherApp.swift; sourceTree = "<group>"; };
 		E46E59D6289FE12B00B97827 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E46E59D8289FE12C00B97827 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E46E59DB289FE12C00B97827 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 		E46E59D3289FE12B00B97827 /* SwiftUI Weather */ = {
 			isa = PBXGroup;
 			children = (
-				E46E59D4289FE12B00B97827 /* SwiftUI_WeatherApp.swift */,
+				E46E59D4289FE12B00B97827 /* SwiftUIWeatherApp.swift */,
 				E46E59D6289FE12B00B97827 /* ContentView.swift */,
 				E46E59E228A0407600B97827 /* WeatherButton.swift */,
 				E46E59D8289FE12C00B97827 /* Assets.xcassets */,
@@ -141,7 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E46E59D7289FE12B00B97827 /* ContentView.swift in Sources */,
-				E46E59D5289FE12B00B97827 /* SwiftUI_WeatherApp.swift in Sources */,
+				E46E59D5289FE12B00B97827 /* SwiftUIWeatherApp.swift in Sources */,
 				E46E59E328A0407600B97827 /* WeatherButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,7 +199,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -253,7 +253,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

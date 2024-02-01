@@ -1,14 +1,15 @@
+//  /*
 //
-//  ContentView.swift
-//  SwiftUI Weather
+//  Project: SwiftUIWeather
+//  File: ContentView.swift
+//  Created by: Elaidzha Shchukin
+//  Date: 07.08.2022
 //
-//  Created by Elaidzha Shchukin on 07.08.2022.
-//
+//  */
 
 import SwiftUI
 
 struct ContentView: View {
-    
     @State private var isNight = false
     
     var body: some View {
@@ -18,50 +19,45 @@ struct ContentView: View {
             BackroundView(isNight: $isNight)
             
             VStack {
-                CityTextView(cityName: "Bali")
+                CityTextView(cityName: "Kyoto, Japan")
                 
-                
-                MainWeatherStatusView(imageName: isNight ? "moon.stars.fill" : "cloud.sun.fill",
+                MainWeatherStatusView(imageName: isNight
+                                      ? "moon.stars.fill" : "cloud.sun.fill",
                                       temurature: 74)
-              ///  Spacer()
-                
-                HStack(spacing: 20) {
+                HStack(spacing: 22) {
                     
                     WeatherDayView(dayOfWeek: "THU",
                                    imageName: "cloud.sun.fill",
-                                   temurature: 74)
+                                   tempurature: 54)
                     
                     WeatherDayView(dayOfWeek: "WED",
                                    imageName: "cloud.bolt.fill",
-                                   temurature: 50)
+                                   tempurature: 50)
                     
                     WeatherDayView(dayOfWeek: "THU",
                                    imageName: "cloud.sun.bolt.fill",
-                                   temurature: 68)
+                                   tempurature: 68)
                     
                     WeatherDayView(dayOfWeek: "FRI",
                                    imageName: "cloud.sun.rain.fill",
-                                   temurature: 58)
+                                   tempurature: 48)
                     
                     WeatherDayView(dayOfWeek: "SAT",
                                    imageName: "wind",
-                                   temurature: 53)
-                    }
+                                   tempurature: 42)
+                }
                 
                 Spacer()
                 
                 Button {
                     isNight.toggle()
                 } label: {
-                   
                     WeatherButton(title: "Change DAy Time",
                                   textColor: .blue,
                                   backroundColor: .white)
                 }
                 
                 Spacer()
-                
-                
             }
         }
     }
@@ -75,26 +71,23 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct WeatherDayView: View {
-    
     var dayOfWeek: String
     var imageName: String
-    var temurature: Int
-    
-    
+    var tempurature: Int
     
     var body: some View {
         VStack{
             Text(dayOfWeek)
-                .font(.system(size: 16, weight: .medium, design: .default))
+                .font(.system(size: 16, weight: .medium, design: .monospaced))
                 .foregroundColor(.white)
             Image(systemName: imageName)
                 .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 40, height: 40)
+                .frame(width: 35, height: 35)
             
-            Text("\(temurature)°")
-                .font(.system(size: 28, weight: .medium))
+            Text("\(tempurature)°")
+                .font(.system(size: 28, weight: .medium, design: .monospaced))
                 .foregroundColor(.white)
             
         }
@@ -102,8 +95,6 @@ struct WeatherDayView: View {
 }
 
 struct BackroundView: View {
-    
-   
     @Binding var isNight: Bool
     
     var body: some View {
@@ -113,23 +104,18 @@ struct BackroundView: View {
 }
 
 struct CityTextView: View {
-    
     var cityName: String
     
     var body: some View {
         Text(cityName)
-            .font(.system(size: 32, weight: .medium, design: .default))
+            .font(.system(size: 35, weight: .medium, design: .monospaced))
             .foregroundColor(.white)
-        
-        
     }
 }
 
 struct MainWeatherStatusView: View {
-    
     var imageName: String
     var temurature: Int
-    
     
     var body: some View {
         
@@ -141,14 +127,12 @@ struct MainWeatherStatusView: View {
                 .frame(width: 180, height: 180)
             
             Text("\(temurature)°")
-                .font(.system(size: 70, weight: .medium))
+                .font(.system(size: 60, weight: .medium, design: .monospaced))
                 .foregroundColor(.white)
             
         }
-    
+        
         .padding(.bottom, 40)
-        
-        
     }
 }
 
