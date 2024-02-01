@@ -9,23 +9,22 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct WeatherView: View {
     @State private var isNight = false
     
     var body: some View {
         
         ZStack {
             Color(.blue)
-            BackroundView(isNight: $isNight)
+            BackroundView(isNight: isNight)
             
             VStack {
                 CityTextView(cityName: "Kyoto, Japan")
                 
                 MainWeatherStatusView(imageName: isNight
-                                      ? "moon.stars.fill" : "cloud.sun.fill",
-                                      temurature: 74)
+                                      ? "cloud.moon.fill" : "cloud.sun.fill",
+                                      temurature: 56)
                 HStack(spacing: 22) {
-                    
                     WeatherDayView(dayOfWeek: "THU",
                                    imageName: "cloud.sun.fill",
                                    tempurature: 54)
@@ -52,7 +51,7 @@ struct ContentView: View {
                 Button {
                     isNight.toggle()
                 } label: {
-                    WeatherButton(title: "Change DAy Time",
+                    WeatherButton(title: "Change Day Time",
                                   textColor: .blue,
                                   backroundColor: .white)
                 }
@@ -63,43 +62,19 @@ struct ContentView: View {
     }
 }
 
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-
-struct WeatherDayView: View {
-    var dayOfWeek: String
-    var imageName: String
-    var tempurature: Int
-    
-    var body: some View {
-        VStack{
-            Text(dayOfWeek)
-                .font(.system(size: 16, weight: .medium, design: .monospaced))
-                .foregroundColor(.white)
-            Image(systemName: imageName)
-                .renderingMode(.original)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 35, height: 35)
-            
-            Text("\(tempurature)°")
-                .font(.system(size: 28, weight: .medium, design: .monospaced))
-                .foregroundColor(.white)
-            
-        }
-    }
+#Preview {
+    WeatherView()
 }
 
 struct BackroundView: View {
-    @Binding var isNight: Bool
+    var isNight: Bool
     
     var body: some View {
-        LinearGradient(gradient: Gradient(colors: [isNight ? .black : .blue, isNight ? .gray : Color("lightBlue")]), startPoint: .topLeading, endPoint: .bottomTrailing)
-            .edgesIgnoringSafeArea(.all)
+        LinearGradient(gradient:
+                        Gradient(colors: [isNight ? .black : .blue, isNight ? .gray : .white]),
+                       startPoint: .topLeading,
+                       endPoint: .bottomTrailing)
+        .ignoresSafeArea()
     }
 }
 
@@ -110,6 +85,7 @@ struct CityTextView: View {
         Text(cityName)
             .font(.system(size: 35, weight: .medium, design: .monospaced))
             .foregroundColor(.white)
+            .padding()
     }
 }
 
@@ -124,15 +100,40 @@ struct MainWeatherStatusView: View {
                 .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 180, height: 180)
+                .frame(width: 160, height: 160)
             
             Text("\(temurature)°")
                 .font(.system(size: 60, weight: .medium, design: .monospaced))
                 .foregroundColor(.white)
-            
         }
         
         .padding(.bottom, 40)
     }
 }
+
+struct WeatherDayView: View {
+    var dayOfWeek: String
+    var imageName: String
+    var tempurature: Int
+    
+    var body: some View {
+        VStack{
+            Text(dayOfWeek)
+                .font(.system(size: 16, weight: .medium, design: .monospaced))
+                .foregroundColor(.white)
+            Image(systemName: imageName)
+                .symbolRenderingMode(.multicolor)
+                .resizable()
+            //.foregroundStyle(.brown)
+            //.foregroundStyle(.orange, .red, .green)
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 35, height: 35)
+            
+            Text("\(tempurature)°")
+                .font(.system(size: 28, weight: .medium, design: .monospaced))
+                .foregroundColor(.white)
+        }
+    }
+}
+
 

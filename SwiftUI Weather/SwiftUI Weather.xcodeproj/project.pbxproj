@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E46E59D5289FE12B00B97827 /* SwiftUIWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46E59D4289FE12B00B97827 /* SwiftUIWeatherApp.swift */; };
-		E46E59D7289FE12B00B97827 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46E59D6289FE12B00B97827 /* ContentView.swift */; };
+		E46E59D7289FE12B00B97827 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46E59D6289FE12B00B97827 /* WeatherView.swift */; };
 		E46E59D9289FE12C00B97827 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E46E59D8289FE12C00B97827 /* Assets.xcassets */; };
 		E46E59DC289FE12C00B97827 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E46E59DB289FE12C00B97827 /* Preview Assets.xcassets */; };
 		E46E59E328A0407600B97827 /* WeatherButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46E59E228A0407600B97827 /* WeatherButton.swift */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		E46E59D1289FE12B00B97827 /* SwiftUI Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E46E59D4289FE12B00B97827 /* SwiftUIWeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWeatherApp.swift; sourceTree = "<group>"; };
-		E46E59D6289FE12B00B97827 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E46E59D6289FE12B00B97827 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		E46E59D8289FE12C00B97827 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E46E59DB289FE12C00B97827 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E46E59E228A0407600B97827 /* WeatherButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherButton.swift; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				E46E59D4289FE12B00B97827 /* SwiftUIWeatherApp.swift */,
-				E46E59D6289FE12B00B97827 /* ContentView.swift */,
+				E46E59D6289FE12B00B97827 /* WeatherView.swift */,
 				E46E59E228A0407600B97827 /* WeatherButton.swift */,
 				E46E59D8289FE12C00B97827 /* Assets.xcassets */,
 				E46E59DA289FE12C00B97827 /* Preview Content */,
@@ -98,7 +98,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					E46E59D0289FE12B00B97827 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -140,7 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E46E59D7289FE12B00B97827 /* ContentView.swift in Sources */,
+				E46E59D7289FE12B00B97827 /* WeatherView.swift in Sources */,
 				E46E59D5289FE12B00B97827 /* SwiftUIWeatherApp.swift in Sources */,
 				E46E59E328A0407600B97827 /* WeatherButton.swift in Sources */,
 			);
@@ -185,6 +185,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -245,6 +246,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
