@@ -24,6 +24,7 @@ struct WeatherView: View {
                 MainWeatherStatusView(imageName: isNight
                                       ? "cloud.moon.fill" : "cloud.sun.fill",
                                       temurature: 56)
+                .padding(.bottom, 40)
                 HStack(spacing: 22) {
                     WeatherDayView(dayOfWeek: "THU",
                                    imageName: "cloud.sun.fill",
@@ -52,8 +53,8 @@ struct WeatherView: View {
                     isNight.toggle()
                 } label: {
                     WeatherButton(title: "Change Day Time",
-                                  textColor: .blue,
-                                  backroundColor: .white)
+                                  textColor: isNight ? .gray : .white,
+                                  backroundColor: isNight ? .black : .blue)
                 }
                 
                 Spacer()
@@ -70,11 +71,14 @@ struct BackroundView: View {
     var isNight: Bool
     
     var body: some View {
-        LinearGradient(gradient:
-                        Gradient(colors: [isNight ? .black : .blue, isNight ? .gray : .white]),
-                       startPoint: .topLeading,
-                       endPoint: .bottomTrailing)
-        .ignoresSafeArea()
+//        LinearGradient(gradient:
+//                        Gradient(colors: [isNight ? .black : .blue, isNight ? .gray : .white]),
+//                       startPoint: .topLeading,
+//                       endPoint: .bottomTrailing)
+//        .ignoresSafeArea()
+        ContainerRelativeShape()
+            .fill(isNight ? Color.black.gradient : Color.blue.gradient)
+            .ignoresSafeArea()
     }
 }
 
@@ -85,7 +89,7 @@ struct CityTextView: View {
         Text(cityName)
             .font(.system(size: 35, weight: .medium, design: .monospaced))
             .foregroundColor(.white)
-            .padding()
+            .padding(20)
     }
 }
 
@@ -107,7 +111,7 @@ struct MainWeatherStatusView: View {
                 .foregroundColor(.white)
         }
         
-        .padding(.bottom, 40)
+        .padding(.bottom, 50)
     }
 }
 
