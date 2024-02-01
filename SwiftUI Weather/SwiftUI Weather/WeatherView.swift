@@ -23,28 +23,28 @@ struct WeatherView: View {
                 
                 MainWeatherStatusView(imageName: isNight
                                       ? "cloud.moon.fill" : "cloud.sun.fill",
-                                      temurature: 56)
+                                      temurature: isNight ? 34 : 56)
                 .padding(.bottom, 40)
                 HStack(spacing: 22) {
                     WeatherDayView(dayOfWeek: "THU",
                                    imageName: "cloud.sun.fill",
-                                   tempurature: 54)
+                                   tempurature: isNight ? 24 : 56)
                     
                     WeatherDayView(dayOfWeek: "WED",
                                    imageName: "cloud.bolt.fill",
-                                   tempurature: 50)
+                                   tempurature: isNight ? 23 : 48)
                     
                     WeatherDayView(dayOfWeek: "THU",
                                    imageName: "cloud.sun.bolt.fill",
-                                   tempurature: 68)
+                                   tempurature: isNight ? 18 : 52)
                     
                     WeatherDayView(dayOfWeek: "FRI",
                                    imageName: "cloud.sun.rain.fill",
-                                   tempurature: 48)
+                                   tempurature: isNight ? 28 : 66)
                     
                     WeatherDayView(dayOfWeek: "SAT",
                                    imageName: "wind",
-                                   tempurature: 42)
+                                   tempurature: isNight ? 34 : 75)
                 }
                 
                 Spacer()
