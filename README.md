@@ -22,3 +22,28 @@ Weather App
                 .frame(width: 160, height: 160)
 
 ``````
+
+``````ruby
+  Image(systemName: "person")
+                .resizable()
+                .renderingMode(.template)
+                .foregroundStyle(.red)
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 25, height: 25)
+``````
+
+``````ruby
+
+
+``````ruby
+Image(uiImage: image)
+.resizable()
+.renderingMode(.template)
+.foregroundStyle(.white)
+.aspectRatio(contentMode: .fit)
+.frame(width: 25, height: 25)
+.padding(10)
+.background(Color(viewModel.iconContainerColor))
+.cornerRadius(10)                                                
+
+`````
