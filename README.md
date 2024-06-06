@@ -12,3 +12,13 @@ Weather App
 - Weather - Button & Refactoring.
 - Weather - @State & @Binding Basics.
 - Weather App - iOS 15 & 16 Updates.
+------------
+
+``````ruby
+ Image(systemName: imageName)
+                .renderingMode(.original)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 160, height: 160)
+
+``````
