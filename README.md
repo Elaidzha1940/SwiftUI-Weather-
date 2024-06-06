@@ -33,17 +33,14 @@ Weather App
 ``````
 
 ``````ruby
+  Image(uiImage: image)
+        .resizable()
+        .renderingMode(.template)
+        .foregroundStyle(.white)
+        .aspectRatio(contentMode: .fit)
+        .frame(width: 25, height: 25)
+        .padding(10)
+        .background(Color(viewModel.iconContainerColor))
+        .cornerRadius(10)                                                
 
-
-``````ruby
-Image(uiImage: image)
-.resizable()
-.renderingMode(.template)
-.foregroundStyle(.white)
-.aspectRatio(contentMode: .fit)
-.frame(width: 25, height: 25)
-.padding(10)
-.background(Color(viewModel.iconContainerColor))
-.cornerRadius(10)                                                
-
-`````
+``````
